@@ -15,7 +15,7 @@ const Banner = () => {
       
       <button
         onClick={() => navigate("/add-friend")}
-        className="bg-[#244D3F] text-white font-semibold px-6 py-2.5 rounded-md shadow-sm hover:bg-[#244D3F] transition flex items-center gap-2 mx-auto"
+        className="bg-[#244D3F] text-white font-semibold px-6 py-2.5 rounded-md shadow-sm hover:bg-[#244D] transition flex items-center gap-2 mx-auto"
       >
         <span className="text-lg">+</span> Add a Friend
       </button>
