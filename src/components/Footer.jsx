@@ -23,7 +23,7 @@ export default function Footer() {
 
         {/* social part */}
         <div className="mb-12 text-center">
-          <h4 className="text-[20px] font-medium mb-5 uppercase tracking-[0.2em] text-gray-200">
+          <h4 className="text-[20px] font-medium mb-5 text-gray-200">
             Social Links
           </h4>
 
