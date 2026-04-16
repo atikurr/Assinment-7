@@ -19,8 +19,9 @@ const FriendDetail = () => {
       id: Date.now(),
       type: type,
       title: `${type} with ${friend.name}`,
-      date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+      date: new Date().toISOString(),
     };
+
     addTimelineEntry(newEntry);
     toast.success(`${type} added to timeline!`);
   };
@@ -28,7 +29,7 @@ const FriendDetail = () => {
   return (
     <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      {/* left*/}
+      {/* LEFT */}
       <div className="md:col-span-1 flex flex-col gap-4">
 
         {/* Profile Card */}
@@ -40,7 +41,7 @@ const FriendDetail = () => {
           />
           <h2 className="text-xl font-bold mb-2">{friend.name}</h2>
 
-          {/* Status Badge */}
+          {/* Status */}
           <div className="flex justify-center mb-2">
             <span className="bg-red-500 text-white px-3 py-0.5 rounded-full text-xs font-semibold uppercase">
               {friend.status}
@@ -50,17 +51,24 @@ const FriendDetail = () => {
           {/* Tags */}
           <div className="flex justify-center gap-2 mb-4">
             {friend.tags.map(tag => (
-              <span key={tag} className="bg-green-100 text-green-700 text-xs px-3 py-0.5 rounded-full font-medium">
+              <span
+                key={tag}
+                className="bg-green-100 text-green-700 text-xs px-3 py-0.5 rounded-full font-medium"
+              >
                 {tag.toUpperCase()}
               </span>
             ))}
           </div>
 
-          <p className="text-gray-400 text-sm italic mb-1">"{friend.bio}"</p>
-          <p className="text-gray-400 text-xs">Preferred: {friend.email}</p>
+          <p className="text-gray-400 text-sm italic mb-1">
+            "{friend.bio}"
+          </p>
+          <p className="text-gray-400 text-xs">
+            Preferred: {friend.email}
+          </p>
         </div>
 
-        {/* action btn*/}
+        {/* Action Buttons */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
           <button className="w-full flex items-center justify-center gap-2 py-3.5 text-sm text-gray-600 hover:bg-gray-50 border-b border-gray-100">
             <FaClock size={14} /> Snooze 2 Weeks
@@ -74,41 +82,64 @@ const FriendDetail = () => {
         </div>
       </div>
 
-      {/* right */}
+      {/* RIGHT */}
       <div className="md:col-span-2 flex flex-col gap-4">
 
-        {/* Stats Cards */}
+        {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <p className="text-3xl font-bold text-[#244D3F]">{friend.days_since_contact}</p>
-            <p className="text-xs text-[#64748B] mt-2">Days Since Contact</p>
+            <p className="text-3xl font-bold text-[#244D3F]">
+              {friend.days_since_contact}
+            </p>
+            <p className="text-xs text-[#64748B] mt-2">
+              Days Since Contact
+            </p>
           </div>
+
           <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <p className="text-3xl font-bold text-[#244D3F]">{friend.goal}</p>
-            <p className="text-xs text-[#64748B] mt-2">Goal (Days)</p>
+            <p className="text-3xl font-bold text-[#244D3F]">
+              {friend.goal}
+            </p>
+            <p className="text-xs text-[#64748B] mt-2">
+              Goal (Days)
+            </p>
           </div>
+
           <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <p className="text-lg font-bold text-[#244D3F]">{friend.next_due_date}</p>
-            <p className="text-xs text-[#64748B] mt-2">Next Due</p>
+            <p className="text-lg font-bold text-[#244D3F]">
+              {friend.next_due_date}
+            </p>
+            <p className="text-xs text-[#64748B] mt-2">
+              Next Due
+            </p>
           </div>
         </div>
 
         {/* Relationship Goal */}
         <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="font-medium text-[#244D3F]">Relationship Goal</h3>
+            <h3 className="font-medium text-[#244D3F]">
+              Relationship Goal
+            </h3>
             <button className="text-xs border border-gray-200 px-3 py-1 rounded-lg text-gray-500 hover:bg-gray-50">
               Edit
             </button>
           </div>
+
           <p className="text-sm text-[#64748B]">
-            Connect every <span className="font-bold text-gray-800">{friend.goal} days</span>
+            Connect every{" "}
+            <span className="font-bold text-gray-800">
+              {friend.goal} days
+            </span>
           </p>
         </div>
 
         {/* Quick Check-In */}
         <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-          <h3 className="font-medium text-[#244D3F] mb-4">Quick Check-In</h3>
+          <h3 className="font-medium text-[#244D3F] mb-4">
+            Quick Check-In
+          </h3>
+
           <div className="grid grid-cols-3 gap-4">
 
             <button

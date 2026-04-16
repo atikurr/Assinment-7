@@ -7,8 +7,14 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Home() {
   const { friends, timeline, loading } = useContext(AppContext);
+
+  
   const onTrack = friends.filter((f) => f.status === "on-track").length;
-  const overdue = friends.filter((f) => f.status === "overdue").length;
+
+ 
+  const needAttention = friends.filter(
+    (f) => f.status === "overdue" || f.status === "almost due"
+  ).length;
 
   
   const now = new Date();
@@ -37,7 +43,7 @@ export default function Home() {
       <StatsSummary 
         total={friends.length} 
         onTrack={onTrack} 
-        needAttention={overdue} 
+        needAttention={needAttention} 
         interactions={interactions} 
       />
 
