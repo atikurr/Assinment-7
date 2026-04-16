@@ -1,16 +1,72 @@
-# React + Vite
+# 🌿 KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web app to help you manage and maintain meaningful relationships by tracking interactions with your friends.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Link
 
-## React Compiler
+👉 https://assinment-7-hazel.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Description
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+KeenKeeper is a simple yet powerful relationship tracker that allows users to monitor when they last contacted their friends and stay connected consistently. It helps prevent relationships from fading by organizing interactions like calls, messages, and video chats in a clean timeline.
+
+---
+
+## 🛠️ Technologies Used
+
+* React.js
+* React Router DOM
+* Context API
+* Tailwind CSS
+* Vite
+* Recharts
+
+---
+
+## 🚀 Key Features
+
+### 1️⃣ Interaction Tracking
+
+Users can log calls, texts, and video interactions, which are automatically saved and displayed in a timeline.
+
+### 2️⃣ Timeline & Filtering
+
+All interactions are shown in a timeline with filtering options (Call, Text, Video) for better organization.
+
+### 3️⃣ Analytics Dashboard
+
+Visual insights using charts to show interaction patterns and activity distribution.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
+```
+
+---
+
+## 📁 Folder Structure (Simplified)
+
+```
+src/
+  components/
+  pages/
+  context/
+  assets/
+public/
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
