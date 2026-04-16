@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiOutlineHome, HiOutlineClock, HiOutlineChartBar, HiMenu, HiX } from "react-icons/hi";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
-          <img src="/src/assets/logo.png" alt="KeenKeeper Logo" className="h-8 md:h-10 w-auto" />
+          <img src={logo} alt="KeenKeeper Logo" className="h-8 md:h-10 w-auto" />
         </NavLink>
 
         {/* Desktop Nav Links */}
