@@ -8,7 +8,7 @@ const Stats = () => {
   const { timeline } = useContext(AppContext);
   const navigate = useNavigate();
 
-  // ✅ Data
+ 
   const data = [
     { name: 'Text', value: timeline.filter(t => t.type === 'Text').length },
     { name: 'Call', value: timeline.filter(t => t.type === 'Call').length },
@@ -44,14 +44,14 @@ const Stats = () => {
               </p>
               <button
                 onClick={() => navigate('/')}
-                className="mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2.5 rounded-lg transition"
+                className="mt-2 bg-[#244D3F] hover:bg-[#244D3F] text-white font-semibold px-6 py-2.5 rounded-lg transition"
               >
                 Browse Friends
               </button>
             </div>
           ) : (
-            // 🔥 FIXED HEIGHT (NO ERROR)
-            <div className="w-full h-[400px]">
+           
+            <div className="w-full h-400px">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
 
